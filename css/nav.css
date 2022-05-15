@@ -1,0 +1,42 @@
+.navigation {
+    grid-area: nav;
+    align-self: center;
+    color: #5222D0;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        padding: 5% 0;
+        font-size: smaller;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_left {
+    justify-content: flex-start;
+}
+
+.nav-container {
+    margin: 5% 50% 0 5%;
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width: 1023px) {
+    .nav-container {
+        padding-top: 15%;
+        margin-right: 5%;
+    }
+}
+
+.nav__item_link_active {
+    color: black;
+}
+
+.nav__item_link:hover {
+    color: #382c58;
+    transition: 1s;
+}

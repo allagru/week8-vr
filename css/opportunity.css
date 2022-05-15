@@ -1,0 +1,70 @@
+@media screen and (min-width: 1024px) {
+    .opportunity {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width: 768px) {
+    .opportunity {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .opportunity {
+        gap: 1%;
+    }
+}
+
+.opportunity {
+    display: grid;
+}
+
+.opportunity__title {
+    text-transform: uppercase;
+    font-family: Intro;
+    font-weight: bold;
+    font-size: 2em;
+    padding-left: 0.5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.opportunity-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 2% 0 2%;
+}
+
+.opportunity-card__title {
+    text-transform: uppercase;
+    font-family: Intro;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.opportunity-card__title_light {
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+.opportunity-card_bg {
+    background: #EC615B;
+}
+
+@media screen and (max-width: 768px) {
+    .opportunity-card_bg {
+        padding-bottom: 5%;
+    }
+}
+
+.mail {
+    min-width: 100%;
+}
+
+.btn_mail {
+    max-width: 40%;
+    margin-top: 2%;
+}

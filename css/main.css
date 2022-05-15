@@ -1,0 +1,101 @@
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (min-width: 1024px) {
+    .main-container {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "content content img img img"
+        "content content img img img"
+        "content content img img img"
+        "nav nav img img img";
+        margin: 0 0 0 10%;
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width: 768px) {
+    .main-container {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "content content content img img"
+        "content content content img img"
+        "content content content img img"
+        "nav nav nav nav nav";
+        margin: 5% 5% 0 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        grid-template-rows: repeat(4, fit-content);
+        grid-template-areas: 
+        "content content content content content"
+        "content content content content content"
+        "img img img img img"
+        "nav nav nav nav nav";
+        margin: 5% 5% 0 5%;
+    }
+    .main-content {
+        margin-bottom: 5%;
+    }
+}
+
+.main-content {
+    grid-area: content;
+    padding-top: 20%;
+}
+
+@media screen and (max-width:1023px) {
+    .main-content {
+        padding-top: 2%;
+    }
+}
+
+.main-content__title {
+    font-family: Intro;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.main-content__text {
+    font-size: larger;
+    padding: 5% 10% 5% 0;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content__text {
+        padding-right: 0;
+    }
+}
+
+.main__btn {
+    font-size: 2em;
+    padding: 3% 7%;
+}
+
+@media screen and (min-width: 1023px){
+    .main__btn:hover {
+        animation: skew 1.5s infinite;
+    }
+    
+    @keyframes skew {
+        0% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(10deg);
+        }
+        60% {
+            transform: rotate(-10deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+}
+
+.main-image {
+    grid-area: img;
+}
